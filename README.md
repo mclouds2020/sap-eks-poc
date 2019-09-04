@@ -1,9 +1,10 @@
 # Instructions
 - make cluster `infra-master`
-0 - Run terraform to create subnets (one VPC / org? One routing VPC) Add bastion host.
-1 - Create kustomize overlay
-2 - `kustomize build overlays/<my cluster> | eksctl create cluster -f -` (`kustomize build cluster/overlays/infra-master |eksctl --profile sap-eks create cluster -f -`)
-3 - bootstrap cluster:
+- Run terraform to create subnets (one VPC / org? One routing VPC) Add bastion host.
+- Create kustomize overlay
+- `kustomize build overlays/<my cluster> | eksctl create cluster -f -` (`kustomize build cluster/overlays/infra-master |eksctl --profile sap-eks create cluster -f -`)
+- bootstrap cluster:
+    - gvisor
     - PodNodeSelector, missing in AWS EKS 
     - psp
     - argo cd
