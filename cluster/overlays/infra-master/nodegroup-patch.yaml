@@ -1,0 +1,9 @@
+- op: replace
+  path: /nodeGroups/0/name
+  value: infra-cluster-master-infra
+- op: replace
+  path: /nodeGroups/1/name
+  value: infra-cluster-master-workers
+- op: replace
+  path: /nodeGroups/2/name
+  value: infra-cluster-master-spot

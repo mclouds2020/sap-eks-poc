@@ -1,0 +1,15 @@
+resources:
+- ../../base
+namePrefix: infra-
+nameSuffix: -master
+
+patchesStrategicMerge:
+- cluster.yaml
+
+patchesJson6902:
+- target:
+    group: eksctl.io
+    version: v1alpha5
+    kind: ClusterConfig
+    name: cluster
+  path: nodegroup-patch.yaml

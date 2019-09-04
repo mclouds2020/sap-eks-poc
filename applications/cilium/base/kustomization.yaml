@@ -1,0 +1,3 @@
+resources:
+- eks-node-init.yaml
+- cilium.yaml
